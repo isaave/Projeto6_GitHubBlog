@@ -60,4 +60,14 @@ Registro de como o OpenCode foi usado como apoio (não substituto da compreensã
 
 ---
 
+## Evidência 7 — Componentes de layout e estados (TASK-06, 2026-11-24)
+
+- **Contexto/prompt:** criar Header, ProfileCard, LoadingState, ErrorState e EmptyState conforme TASK-06 e tokens do Figma.
+- **Objetivo:** preparar a camada visual reutilizável antes de integrar o feed.
+- **Resultado do OpenCode:** criou `public/cover.svg` (arte vetorial com malha/órbitas), `Header.tsx`, `ProfileCard.tsx`, `LoadingState.tsx` (variantes profile/cards/post), `ErrorState.tsx` (com mensagem específica para rate limit e botão Tentar novamente) e `EmptyState.tsx`. Avatar com `alt`, link externo com `rel="noreferrer"`, `role="status"`/`role="alert"` nos estados.
+- **Ajustes feitos pelo aluno:** build acusou que `lucide-react@1.79` não exporta mais `Github`; foi criado `GitHubIcon.tsx` com SVG próprio e os imports foram corrigidos.
+- **Verificação pelo aluno:** `npm run build` e `npm run lint` sem erros; validar contraste e sobreposição do card no navegador após a TASK-07.
+
+---
+
 > As próximas evidências serão adicionadas a cada tarefa implementada, com o prompt usado, o resultado, os ajustes manuais e a forma de verificação.

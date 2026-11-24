@@ -53,7 +53,7 @@
 - **RF/RN:** RF-01, RF-02, RF-13, RF-15, RF-16.
 - **Arquivos:** `src/components/Header.tsx`, `ProfileCard.tsx`, `LoadingState.tsx`, `ErrorState.tsx`, `EmptyState.tsx`.
 - **Critério de pronto:** perfil real com fallbacks; alt do avatar; Tentar novamente presente; foco visível.
-- **Status:** [ ]
+- **Status:** [x] (2026-11-24) — componentes criados; build e lint OK.Ícone do GitHub implementado em SVG local porque o lucide-react v1 não exporta ícones de marca.
 
 ## TASK-07 — Home: busca, cards e paginação
 - **Descrição:** montar feed com SearchInput, IssueList/IssueCard e Pagination; integrar hooks.
@@ -98,3 +98,4 @@
 | TASK-03 | `feat: scaffold Vite React TS with Tailwind v4 tokens` | 2026-11-24 |
 | TASK-04 | `feat: add typed GitHub API service and error mapping` | 2026-11-24 |
 | TASK-05 | `feat: add async hooks and formatting utilities` | 2026-11-24 |
+| TASK-06 | `feat: add header, profile card and async state views` | 2026-11-24 |
