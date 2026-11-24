@@ -69,7 +69,7 @@
 - **RF/RN:** RF-09..RF-12, RF-16, RN-07, RN-08.
 - **Arquivos:** `src/pages/PostPage.tsx`, `src/pages/NotFoundPage.tsx`, `src/components/MarkdownView.tsx`, `src/App.tsx`.
 - **Critério de pronto:** URL direta funciona; Markdown formatado; Voltar e Ver no GitHub funcionam; rota inválida mostra 404.
-- **Status:** [ ]
+- **Status:** [x] (2026-11-24) — build/lint OK; rotas validadas no navegador (`/post/abc` → 404, `/post/1` → erro 404 com retry). Markdown ainda será exercitado com as issues da TASK-02.
 
 ## TASK-09 — Testes automatizados
 - **Descrição:** configurar Vitest + Testing Library + MSW e cobrir 3 cenários da TECH_SPEC.
@@ -100,3 +100,4 @@
 | TASK-05 | `feat: add async hooks and formatting utilities` | 2026-11-24 |
 | TASK-06 | `feat: add header, profile card and async state views` | 2026-11-24 |
 | TASK-07 | `feat: build home feed with search and pagination` | 2026-11-24 |
+| TASK-08 | `feat: add post detail route, markdown view and 404` | 2026-11-24 |

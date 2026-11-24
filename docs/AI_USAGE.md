@@ -80,4 +80,14 @@ Registro de como o OpenCode foi usado como apoio (não substituto da compreensã
 
 ---
 
+## Evidência 9 — Detalhe, Markdown e 404 (TASK-08, 2026-11-24)
+
+- **Contexto/prompt:** implementar a TASK-08 com rota `/post/:number`, MarkdownView, cabeçalho detalhado e fallback de rota inexistente.
+- **Objetivo:** completar o terceiro fluxo central da recuperação.
+- **Resultado do OpenCode:** criou `PostPage.tsx` (valida o parâmetro, usa `useIssue`, metadados, Voltar com `navigate(-1)` ou `/`, link externo seguro), `MarkdownView.tsx` (react-markdown + remark-gfm com componentes estilizados e links `target="_blank" rel="noreferrer"`) e `NotFoundPage.tsx`. Registrou as três rotas no `App.tsx`.
+- **Ajustes feitos pelo aluno:** o build gerou aviso de chunk >500 kB; `PostPage` passou a ser carregado com `React.lazy` + `Suspense`, separando 169 kB do bundle inicial. Removeu `useNavigate` não usado no componente externo.
+- **Verificação pelo aluno:** `npm run build` e `npm run lint` sem erros nem avisos. No navegador, `/post/abc` mostrou 404 com link de retorno e `/post/1` mostrou mensagem de não encontrado com botão Tentar novamente (404 real da API sem issues).
+
+---
+
 > As próximas evidências serão adicionadas a cada tarefa implementada, com o prompt usado, o resultado, os ajustes manuais e a forma de verificação.
