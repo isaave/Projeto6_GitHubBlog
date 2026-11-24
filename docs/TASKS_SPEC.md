@@ -21,7 +21,7 @@
 - **RF/RN:** RF-03, RN-02, RN-07.
 - **Arquivos:** `content/issues/issue-01.md` … `issue-10.md`.
 - **Critério de pronto:** `GET /repos/isaave/Projeto6_GitHubBlog/issues?state=all` retorna ≥ 10 issues sem PRs.
-- **Status:** [ ] — **bloqueio:** depende de autenticação GitHub (sem token no repo); aluno publica via UI ou fornece token temporário.
+- **Status:** [~] (2026-11-24) — 10 corpos Markdown prontos em `content/issues/` com índice de títulos. **Bloqueio restante:** publicar as issues no GitHub (sem `gh` nem token no ambiente); aluno publica via UI ou autoriza publicação autenticada.
 
 ## TASK-03 — Scaffold Vite + React + TypeScript + Tailwind v4
 - **Descrição:** criar projeto na raiz, instalar dependências, configurar Tailwind, tokens do Figma, fonte Nunito e scripts.
