@@ -121,7 +121,7 @@ export interface IssueSearchResponse {
   items: GitHubIssue[];
 }
 
-export type ApiErrorKind = 'rate_limit' | 'not_found' | 'network' | 'unknown';
+export type ApiErrorKind = 'rate_limit' | 'not_found' | 'network' | 'canceled' | 'unknown';
 
 export interface BlogApiError {
   kind: ApiErrorKind;
@@ -151,7 +151,7 @@ export async function getIssue(number: number, signal?: AbortSignal): Promise<Gi
 - `searchIssues` monta `q` com `params: { q, sort: 'created', order: 'desc', page, per_page }` — Axios codifica a query (RN-06).
 - `q = [term.trim(), `repo:${username}/${repo}`, 'is:issue'].filter(Boolean).join(' ')` (RN-01, RN-03, RN-04).
 - Erros mapeados em `utils/apiError.ts`: 403/429 com header de rate limit → `rate_limit`; 404 → `not_found`; sem resposta → `network`; demais → `unknown` (RN-08, RF-14).
-- Cancelamento (`ERR_CANCELED`) é silencioso e nunca vira erro visível.
+- Cancelamento (`ERR_CANCELED`) vira `kind: 'canceled'` e é ignorado pelos Hooks, nunca aparecendo como erro visível.
 
 ## 6. Hooks, roteamento, busca e paginação
 

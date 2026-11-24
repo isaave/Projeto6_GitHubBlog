@@ -40,4 +40,14 @@ Registro de como o OpenCode foi usado como apoio (não substituto da compreensã
 
 ---
 
+## Evidência 5 — Serviço Axios e mapeamento de erros (TASK-04, 2026-11-24)
+
+- **Contexto/prompt:** implementar a TASK-04: config centralizada, interfaces tipadas, `getProfile`, `searchIssues`, `getIssue` e tratamento de 403/429/404/rede/cancelamento.
+- **Objetivo:** isolar toda a lógica HTTP fora dos componentes e tornar os estados de erro previsíveis.
+- **Resultado do OpenCode:** criou `src/config/blog.ts`, `src/types/github.ts`, `src/services/githubApi.ts` e `src/utils/apiError.ts`. A query de busca usa `params` do Axios com `repo:... is:issue`, `sort=created`, `order=desc`, `page` e `per_page`; itens com `pull_request` são removidos. Erros viram `BlogApiError` (`rate_limit`, `not_found`, `network`, `canceled`, `unknown`) com mensagens em português. Atualizou a TECH_SPEC para documentar o tipo `canceled`.
+- **Ajustes feitos pelo aluno:** revisar se a mensagem de rate limit aparece apenas em 403/429 reais e confirmar que nenhum token foi adicionado ao código.
+- **Verificação pelo aluno:** `npm run build` e `npm run lint` passaram; na aba Network, `q` deve conter `repo:isaave/Projeto6_GitHubBlog is:issue` codificado.
+
+---
+
 > As próximas evidências serão adicionadas a cada tarefa implementada, com o prompt usado, o resultado, os ajustes manuais e a forma de verificação.

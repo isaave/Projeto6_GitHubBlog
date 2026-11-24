@@ -37,7 +37,7 @@
 - **RF/RN:** RF-01, RF-05, RF-10, RF-14, RN-01, RN-03, RN-04, RN-06, RN-08, RN-09, RN-10.
 - **Arquivos:** `src/config/blog.ts`, `src/types/github.ts`, `src/services/githubApi.ts`, `src/utils/apiError.ts`.
 - **Critério de pronto:** chamadas retornam tipos corretos; 403/429/404/rede diferenciados; nenhuma string de API fora desses arquivos.
-- **Status:** [ ]
+- **Status:** [x] (2026-11-24) — `npm run build` e `npm run lint` sem erros; RFCancel adicionado ao union de erros na TECH_SPEC.
 
 ## TASK-05 — Hooks e utils
 - **Descrição:** `useDebouncedValue`, `useProfile`, `useIssues`, `useIssue`, formatação de data e resumo.
@@ -96,3 +96,4 @@
 | TASK-01 | `docs: add PRD, TECH, TASKS, AGENTS and AI usage specs` | 2026-11-24 |
 | TASK-02 | pendente | — |
 | TASK-03 | `feat: scaffold Vite React TS with Tailwind v4 tokens` | 2026-11-24 |
+| TASK-04 | `feat: add typed GitHub API service and error mapping` | 2026-11-24 |
