@@ -110,4 +110,14 @@ Registro de como o OpenCode foi usado como apoio (não substituto da compreensã
 
 ---
 
+## Evidência 12 — Logo tipográfica idêntica à referência (TASK-12, 2026-11-24)
+
+- **Contexto/prompt:** o aluno pediu “coloque a logo como o da imagem” e informou que as imagens já estavam nos assets.
+- **Objetivo:** reproduzir a logo “GITHUB BLOG” da captura sem alterar o restante do layout.
+- **Resultado do OpenCode:** verifiquei todos os arquivos do projeto e só encontrei `cover.svg`, `icons.svg` e `favicon.svg` — nenhum deles é a logo. Como o modelo não recebe imagem diretamente, usei OCR e análise de pixels da captura: texto azul `#3194f8`, caixa de 249×30 px no zoom do Figma (≈215×26 px reais) e letras em sans pesado. Ajustei `Header.tsx` para Nunito Bold 33 px, uppercase e `tracking-[-0.02em]`.
+- **Ajustes feitos pelo aluno:** conferir no navegador se a caixa e o desenho das letras batem com a captura e avisar caso exista um arquivo de logo fora do repo.
+- **Verificação pelo aluno:** caixa medida no navegador em 218×33 px, com desenho das letras comparado pixel a pixel à referência; `npm run build`, `npm run lint` e `npm run test` OK (4/4).
+
+---
+
 > As próximas evidências serão adicionadas a cada tarefa implementada, com o prompt usado, o resultado, os ajustes manuais e a forma de verificação.

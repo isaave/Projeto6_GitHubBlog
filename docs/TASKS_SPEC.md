@@ -95,6 +95,14 @@
 - **Critério de pronto:** build/lint/test passando; medidas e posições conferidas no navegador; documentação atualizada para 2 colunas e `line-clamp-4`.
 - **Status:** [x] (2026-11-24) — build/lint/test OK; geometria conferida no navegador (header 516 px, perfil 1280×322 com avatar 224, input 72 px, grid 2 colunas com gap 52 px, card 388 px).
 
+## TASK-12 — Ajustar tipografia da logo à referência
+- **Descrição:** substituir a logo atual por uma tipografia equivalente à da captura enviada: texto “GITHUB BLOG” em azul, com largura/altura e espaçamento próximos ao Figma.
+- **Pré-requisitos:** TASK-11.
+- **RF/RN:** RF-15, RN-10.
+- **Arquivos:** `src/components/Header.tsx`.
+- **Critério de pronto:** caixa da logo próxima de 215×26 px; build/lint/test OK; captura conferida no navegador.
+- **Status:** [x] (2026-11-24) — logo em Nunito Bold 33 px, `tracking-[-0.02em]` e `#3294F8`, caixa de 218×33 px no navegador (ink ~215×24 px), equivalente à referência descontado o zoom; build/lint/test OK. Não há arquivo de logo no repo (apenas `cover.svg`, `icons.svg` e `favicon.svg`), então a logo é tipográfica.
+
 ---
 
 ## Registro de commits
@@ -112,3 +120,4 @@
 | TASK-09 | `test: cover feed, search, pagination, detail and rate limit` | 2026-11-24 |
 | TASK-10 | `docs: add project README and update task status` | 2026-11-24 |
 | TASK-11 | `refactor: match Figma layout from reference screenshots` | 2026-11-24 |
+| TASK-12 | `fix: match logo typography from reference screenshot` | 2026-11-24 |

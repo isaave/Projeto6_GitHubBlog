@@ -13,7 +13,7 @@ export function Header() {
       />
 
       <div className="container-blog flex min-h-[360px] items-center justify-center py-16 sm:min-h-[516px]">
-        <span className="text-center text-[28px] font-extrabold uppercase leading-none tracking-[0.18em] text-brand sm:text-[40px]">
+        <span className="text-center text-[24px] font-bold uppercase leading-none tracking-[-0.02em] text-brand sm:text-[33px]">
           Github Blog
         </span>
       </div>
