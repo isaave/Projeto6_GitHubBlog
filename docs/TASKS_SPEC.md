@@ -77,7 +77,7 @@
 - **RF/RN:** RF-13, RF-14.
 - **Arquivos:** `vitest.config.ts`, `src/test/setup.ts`, `src/test/mocks/handlers.ts`, `src/test/*.test.tsx`.
 - **Critério de pronto:** `npm run test` com 3+ testes passando; `npm run build` sem erros.
-- **Status:** [ ]
+- **Status:** [x] (2026-11-24) — 4 testes passando; build e lint sem erros. Ajustes: adapter HTTP no jsdom e `onUnhandledFrame` (MSW 3).
 
 ## TASK-10 — Documentação final, README, screenshots e deploy
 - **Descrição:** atualizar SPEC/AI_USAGE, escrever README, capturar imagens, publicar no Vercel/Netlify e registrar evidências.
@@ -101,3 +101,4 @@
 | TASK-06 | `feat: add header, profile card and async state views` | 2026-11-24 |
 | TASK-07 | `feat: build home feed with search and pagination` | 2026-11-24 |
 | TASK-08 | `feat: add post detail route, markdown view and 404` | 2026-11-24 |
+| TASK-09 | `test: cover feed, search, pagination, detail and rate limit` | 2026-11-24 |

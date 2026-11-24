@@ -90,4 +90,14 @@ Registro de como o OpenCode foi usado como apoio (não substituto da compreensã
 
 ---
 
+## Evidência 10 — Testes automatizados (TASK-09, 2026-11-24)
+
+- **Contexto/prompt:** configurar Vitest + Testing Library + MSW e cobrir busca/paginação, detalhe com Markdown e estados de falha conforme TECH_SPEC.
+- **Objetivo:** produzir pelo menos três cenários verificáveis com mocks da API do GitHub.
+- **Resultado do OpenCode:** adicionou configuração de teste em `vite.config.ts`, setup com MSW 3, handlers e dados mockados (12 issues) e quatro testes: perfil/feed, debounce+paginação, `/post/12` com Markdown e rate limit com retry. Documentou a estratégia na TECH_SPEC.
+- **Ajustes feitos pelo aluno:** os testes falhavam com erro de rede porque o jsdom bloqueia CORS no adapter XHR; passou-se a forçar `githubApi.defaults.adapter = 'http'`. O TypeScript apontou `onUnhandledRequest` inexistente no MSW 3; substituído por `onUnhandledFrame: 'error'`.
+- **Verificação pelo aluno:** `npm run test` → 4/4 passando; `npm run build` e `npm run lint` sem erros.
+
+---
+
 > As próximas evidências serão adicionadas a cada tarefa implementada, com o prompt usado, o resultado, os ajustes manuais e a forma de verificação.

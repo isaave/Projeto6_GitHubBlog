@@ -183,7 +183,7 @@ Resumo do card: `body` passa por remoção de blocos de código, markdown syntax
 
 ## 9. Estratégia de testes
 
-Framework: Vitest + Testing Library + jsdom + MSW (mock de `https://api.github.com`).
+Framework: Vitest + Testing Library + jsdom + MSW 3 (mock de `https://api.github.com`). Como o jsdom aplica CORS antes da interceptação do XHR, `src/test/setup.ts` força `githubApi.defaults.adapter = 'http'`; a opção do MSW 3 é `onUnhandledFrame: 'error'`.
 
 | Cenário | ID | Verificação |
 | --- | --- | --- |
