@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+/* Design tokens do Figma — https://tailwindcss.com/docs/theme */
+@theme {
+  --color-brand: #3294f8;
+  --color-base-title: #e7edf4;
+  --color-base-subtitle: #c4d4e3;
+  --color-base-text: #afc2d4;
+  --color-base-span: #7b96b2;
+  --color-base-label: #3a536b;
+  --color-base-border: #1c2f41;
+  --color-base-post: #112131;
+  --color-base-profile: #0b1b2b;
+  --color-base-background: #071422;
+  --color-base-input: #040f1a;
+
+  --font-sans: "Nunito", ui-sans-serif, system-ui, sans-serif;
+
+  --text-title-l: 1.5rem;
+  --text-title-l--line-height: 130%;
+  --text-title-m: 1.25rem;
+  --text-title-m--line-height: 160%;
+  --text-title-s: 1.125rem;
+  --text-title-s--line-height: 160%;
+  --text-text-m: 1rem;
+  --text-text-m--line-height: 160%;
+  --text-text-s: 0.875rem;
+  --text-text-s--line-height: 160%;
+  --text-link: 0.75rem;
+  --text-link--line-height: 160%;
+
+  --radius-post: 6px;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-base-background font-sans text-base-text antialiased;
+  }
+
+  ::selection {
+    @apply bg-brand/30 text-base-title;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand;
+  }
+}
+
+@utility container-blog {
+  @apply mx-auto w-full max-w-[1120px] px-5 sm:px-8;
+}

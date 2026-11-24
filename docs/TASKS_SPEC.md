@@ -29,7 +29,7 @@
 - **RF/RN:** RF-15, RF-16, RN-10.
 - **Arquivos:** `package.json`, `vite.config.ts`, `tsconfig*.json`, `index.html`, `src/main.tsx`, `src/App.tsx`, `src/styles/index.css`, `.gitignore`.
 - **Critério de pronto:** `npm run build` passa; tokens `brand/base-*` disponíveis como classes; fonte carregada.
-- **Status:** [ ]
+- **Status:** [x] (2026-11-24) — build OK; `#3294f8`, `#071422`, `container-blog` e `text-title-l` presentes no CSS compilado.
 
 ## TASK-04 — Config, tipos e serviço Axios
 - **Descrição:** centralizar config; definir interfaces; implementar `getProfile`, `searchIssues`, `getIssue`, mapeador de erros e `AbortSignal`.
@@ -95,4 +95,4 @@
 | --- | --- | --- |
 | TASK-01 | `docs: add PRD, TECH, TASKS, AGENTS and AI usage specs` | 2026-11-24 |
 | TASK-02 | pendente | — |
-| TASK-03 | pendente | — |
+| TASK-03 | `feat: scaffold Vite React TS with Tailwind v4 tokens` | 2026-11-24 |

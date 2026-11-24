@@ -30,4 +30,14 @@ Registro de como o OpenCode foi usado como apoio (não substituto da compreensã
 
 ---
 
+## Evidência 4 — Scaffold e tokens Tailwind (TASK-03, 2026-11-24)
+
+- **Contexto/prompt:** executar a TASK-03 do `TASKS_SPEC.md`: gerar Vite React TS, instalar dependências e configurar Tailwind v4 com os tokens do Figma.
+- **Objetivo:** deixar a base compilando com identidade visual consistente antes de implementar componentes.
+- **Resultado do OpenCode:** gerou o scaffold `react-ts` com create-vite v9.3.4 (React 19.3.1, Vite 8.3.6, TypeScript 7.0.2), moveu os arquivos para a raiz preservando `docs/`, `.git/` e `AGENTS.md`; instalou Axios, React Router DOM, react-markdown, remark-gfm, date-fns, lucide-react, Tailwind v4, Vitest, Testing Library, jsdom e MSW; criou `vite.config.ts` com `tailwindcss()`, `src/styles/index.css` com `@theme` (cores, fontes e escalas tipográficas do Figma), `index.html` com Nunito e `lang="pt-BR"`, `strict: true` no tsconfig e script `test`. Removeu CSS/asset padrão do Vite.
+- **Ajustes feitos pelo aluno:** conferir `npm run build` e o CSS gerado; validar visualmente a fonte e o tema escuro no navegador.
+- **Verificação pelo aluno:** `npm run build` concluiu sem erros; `grep` no CSS de `dist` confirmou `#3294f8`, `#071422`, `container-blog` e `text-title-l`.
+
+---
+
 > As próximas evidências serão adicionadas a cada tarefa implementada, com o prompt usado, o resultado, os ajustes manuais e a forma de verificação.
