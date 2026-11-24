@@ -53,7 +53,7 @@ export function IssueList({
   }
 
   return (
-    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-[52px]">
       {issues.map((issue) => (
         <IssueCard key={issue.id} issue={issue} />
       ))}

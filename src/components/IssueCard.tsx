@@ -1,4 +1,4 @@
-import { ArrowUpRight, CalendarDays, MessageSquare } from 'lucide-react'
+import { MessageSquare } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import type { GitHubIssue } from '../types/github'
 import { formatRelativeDate, summarizeBody } from '../utils/format'
@@ -10,9 +10,9 @@ interface IssueCardProps {
 /** Resumo clicável de uma issue/post (RF-08, RF-09). */
 export function IssueCard({ issue }: IssueCardProps) {
   return (
-    <article className="group flex min-h-64 flex-col rounded-post border border-base-border bg-base-post p-6 transition-colors hover:border-brand/60 focus-within:border-brand">
-      <div className="flex items-start justify-between gap-3">
-        <h3 className="text-title-s font-bold leading-snug text-base-title">
+    <article className="group flex min-h-[320px] flex-col rounded-post border border-base-border bg-base-post p-6 transition-colors hover:border-brand/60 focus-within:border-brand sm:min-h-[388px] sm:p-12">
+      <div className="flex items-start justify-between gap-6">
+        <h3 className="text-[20px] font-bold leading-tight text-base-title sm:text-[24px]">
           <Link
             to={`/post/${issue.number}`}
             aria-label={`Ler publicação ${issue.title}`}
@@ -22,29 +22,25 @@ export function IssueCard({ issue }: IssueCardProps) {
             <span className="sr-only"> (abre a publicação)</span>
           </Link>
         </h3>
-        <ArrowUpRight
-          className="mt-1 size-5 shrink-0 text-base-span transition-colors group-hover:text-brand"
-          aria-hidden="true"
-        />
+
+        <time
+          dateTime={issue.created_at}
+          className="shrink-0 whitespace-nowrap text-text-s text-base-span"
+        >
+          {formatRelativeDate(issue.created_at)}
+        </time>
       </div>
 
-      <p className="mt-4 line-clamp-3 text-text-m text-base-text">
-        {summarizeBody(issue.body)}
+      <p className="mt-8 line-clamp-4 text-text-m text-base-text">
+        {summarizeBody(issue.body, 240)}
       </p>
 
-      <footer className="mt-auto flex flex-wrap items-center gap-x-5 gap-y-2 pt-6 text-text-s text-base-span">
-        <span className="inline-flex items-center gap-2">
-          <CalendarDays className="size-4" aria-hidden="true" />
-          <time dateTime={issue.created_at}>
-            {formatRelativeDate(issue.created_at)}
-          </time>
-        </span>
-        <span className="inline-flex items-center gap-2">
+      {issue.comments > 0 ? (
+        <footer className="mt-auto flex items-center gap-2 border-t border-base-border pt-6 text-text-s text-base-span">
           <MessageSquare className="size-4" aria-hidden="true" />
           {issue.comments} {issue.comments === 1 ? 'comentário' : 'comentários'}
-        </span>
-        <span className="ml-auto font-bold text-brand">#{issue.number}</span>
-      </footer>
+        </footer>
+      ) : null}
     </article>
   )
 }

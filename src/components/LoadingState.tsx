@@ -14,10 +14,10 @@ export function LoadingState({
 }: LoadingStateProps) {
   if (variant === 'profile') {
     return (
-      <div className="container-blog relative z-10 -mt-12 sm:-mt-16" role="status" aria-live="polite">
+      <div className="container-blog relative z-10 -mt-20 sm:-mt-[130px]" role="status" aria-live="polite">
         <span className="sr-only">Carregando perfil do GitHub…</span>
-        <div className="flex flex-col gap-6 rounded-post border border-base-border bg-base-profile p-6 sm:flex-row sm:p-8">
-          <Skeleton className="size-24 rounded-full sm:size-36" />
+        <div className="flex flex-col gap-6 rounded-post border border-base-border bg-base-profile p-6 sm:flex-row sm:gap-12 sm:p-12">
+          <Skeleton className="size-24 rounded-full sm:size-56" />
           <div className="flex-1 space-y-3">
             <Skeleton className="h-6 w-1/3" />
             <Skeleton className="h-4 w-24" />
@@ -50,7 +50,7 @@ export function LoadingState({
 
   return (
     <div
-      className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3"
+      className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-[52px]"
       role="status"
       aria-live="polite"
     >
@@ -58,7 +58,7 @@ export function LoadingState({
       {Array.from({ length: cardCount }, (_, index) => (
         <div
           key={index}
-          className="flex h-64 flex-col gap-4 rounded-post border border-base-border bg-base-post p-6"
+          className="flex h-[320px] flex-col gap-4 rounded-post border border-base-border bg-base-post p-6 sm:h-[388px] sm:p-12"
         >
           <Skeleton className="h-6 w-4/5" />
           <Skeleton className="h-4 w-full" />

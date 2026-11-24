@@ -25,6 +25,6 @@ Mantenha o `urlTransform` padrão: ele bloqueia protocolos perigosos como `javas
 
 ## Resumo no card
 
-O corpo completo vai para o detalhe. No card, removemos blocos de código e sintaxe Markdown antes de aplicar `line-clamp-3`, evitando texto cru e blocos longos.
+O corpo completo vai para o detalhe. No card, removemos blocos de código e sintaxe Markdown antes de aplicar `line-clamp-4`, evitando texto cru e blocos longos.
 
 Referência: [react-markdown no GitHub](https://github.com/remarkjs/react-markdown).

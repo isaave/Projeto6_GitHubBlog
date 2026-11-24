@@ -36,7 +36,7 @@ export function HomePage() {
       {profile.status === 'loading' ? (
         <LoadingState variant="profile" />
       ) : profile.status === 'error' || !profile.data ? (
-        <div className="container-blog relative z-10 -mt-12 sm:-mt-16">
+        <div className="container-blog relative z-10 -mt-20 sm:-mt-[130px]">
           <ErrorState
             error={profile.error}
             onRetry={profile.reload}
@@ -47,7 +47,7 @@ export function HomePage() {
         <ProfileCard profile={profile.data} />
       )}
 
-      <main className="container-blog py-12 sm:py-16">
+      <main className="container-blog pb-16 pt-16 sm:pb-24 sm:pt-[112px]">
         <SearchInput
           value={searchValue}
           onChange={handleSearchChange}

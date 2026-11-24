@@ -29,7 +29,7 @@ export function formatNumber(value: number): string {
  * Transforma o Markdown do corpo em texto curto para o card, sem blocos de
  * código extensos nem sintaxe crua (RN-07).
  */
-export function summarizeBody(body: string | null, maxLength = 180): string {
+export function summarizeBody(body: string | null, maxLength = 240): string {
   if (!body?.trim()) return EMPTY_BODY_MESSAGE
 
   const plainText = body

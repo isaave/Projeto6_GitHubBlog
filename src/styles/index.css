@@ -51,5 +51,5 @@
 }
 
 @utility container-blog {
-  @apply mx-auto w-full max-w-[1120px] px-5 sm:px-8;
+  @apply mx-auto w-full max-w-[1344px] px-5 sm:px-8;
 }

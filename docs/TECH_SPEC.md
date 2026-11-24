@@ -37,7 +37,7 @@ App.tsx (BrowserRouter)
  │         └── Pagination                                    [RF-07]
  └── /post/:number → PostPage
  │    └── useIssue(number) → githubApi.getIssue()             [RF-10, RF-13, RF-14]
- │         ├── PostHeader (Voltar, Ver no GitHub, metadados)  [RF-12]
+ │         ├── cabeçalho da PostPage (Voltar, Ver no GitHub, metadados) [RF-12]
  │         └── MarkdownView (react-markdown + remark-gfm)     [RF-11]
  └── * → NotFoundPage                                         [RF-16]
 ```
@@ -171,7 +171,7 @@ export async function getIssue(number: number, signal?: AbortSignal): Promise<Gi
 
 `<Markdown remarkPlugins={[remarkGfm]}>{body}</Markdown>` com componentes customizados para `a` (sempre `target="_blank" rel="noreferrer"`), `pre`, `code`, `h1`-`h3`, `ul`, `ol`, `blockquote` e `table`, estilizados por classes Tailwind. HTML bruto permanece escapado; `urlTransform` padrão é mantido (RN-07, RF-11, RN-09).
 
-Resumo do card: `body` passa por remoção de blocos de código, markdown syntax e links, colapsado em `line-clamp-3`; `body` nulo exibe "Sem conteúdo disponível." (RN-07).
+Resumo do card: `body` passa por remoção de blocos de código, markdown syntax e links, colapsado em `line-clamp-4`; `body` nulo exibe "Sem conteúdo disponível." (RN-07).
 
 ## 8. Acessibilidade
 

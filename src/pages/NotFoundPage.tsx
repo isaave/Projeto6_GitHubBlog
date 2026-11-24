@@ -6,9 +6,11 @@ export function NotFoundPage() {
   return (
     <>
       <Header />
-      <main className="container-blog -mt-8 pb-20 sm:-mt-12">
-        <div className="relative z-10 rounded-post border border-base-border bg-base-profile px-6 py-16 text-center">
-          <p className="text-link font-bold uppercase tracking-widest text-brand">404</p>
+      <main className="container-blog pb-24">
+        <div className="relative z-10 -mt-20 rounded-post border border-base-border bg-base-profile px-6 py-16 text-center sm:-mt-[130px] sm:p-20">
+          <p className="text-link font-bold uppercase tracking-widest text-brand">
+            404
+          </p>
           <h1 className="mt-4 text-title-l font-bold text-base-title">
             Página não encontrada
           </h1>

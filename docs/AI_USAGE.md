@@ -100,4 +100,14 @@ Registro de como o OpenCode foi usado como apoio (não substituto da compreensã
 
 ---
 
+## Evidência 11 — Fidelidade visual às capturas (TASK-11, 2026-11-24)
+
+- **Contexto/prompt:** o aluno enviou duas capturas do Figma e pediu “deixe exatamente com o layout das imagens”.
+- **Objetivo:** reproduzir medidas e posições da referência sem quebrar os fluxos de perfil, busca, paginação e detalhe.
+- **Resultado do OpenCode:** como o modelo não recebe imagens, extraí o texto por OCR (Vision) e as geometria/cores por análise de pixels. Ajustei logo centralizada e azul, container 1280, banner de 516 px, perfil com avatar 224, busca em largura total com label “Publicações” e contador à direita, grid de 2 colunas com gap 52 e cards de 388 px, além do cabeçalho do post em card próprio com Markdown direto no fundo. Atualizei PRD/TECH para `line-clamp-4` e 2 colunas.
+- **Ajustes feitos pelo aluno:** conferir no navegador se as medidas batem com a referência e validar que os testes continuam passando.
+- **Verificação pelo aluno:** `npm run build`, `npm run lint` e `npm run test` OK (4/4). No navegador: header 516 px, logo centralizada 40 px, perfil 936×322 a 1000 px de viewport (equivalente a 1280 px no container desktop), avatar 224 px, input 72 px, label/counter na mesma linha e grid com 2 colunas/gap 52/card 388 px. `/post/1` manteve erro 404 com retry e o mesmo cabeçalho.
+
+---
+
 > As próximas evidências serão adicionadas a cada tarefa implementada, com o prompt usado, o resultado, os ajustes manuais e a forma de verificação.

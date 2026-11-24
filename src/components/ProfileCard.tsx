@@ -13,25 +13,28 @@ export function ProfileCard({ profile }: ProfileCardProps) {
 
   return (
     <section
-      className="container-blog relative z-10 -mt-12 sm:-mt-16"
+      className="container-blog relative z-10 -mt-20 sm:-mt-[130px]"
       aria-labelledby="profile-name"
     >
-      <div className="flex flex-col gap-6 rounded-post border border-base-border bg-base-profile p-6 shadow-xl shadow-black/20 sm:flex-row sm:items-center sm:gap-8 sm:p-8">
+      <div className="flex flex-col gap-6 rounded-post border border-base-border bg-base-profile p-6 sm:flex-row sm:items-center sm:gap-12 sm:p-12">
         <img
           src={profile.avatar_url}
           alt={`Foto de perfil de ${displayName} no GitHub`}
-          width={148}
-          height={148}
-          className="size-24 shrink-0 rounded-full border-4 border-base-background object-cover sm:size-36"
+          width={224}
+          height={224}
+          className="size-24 shrink-0 rounded-full object-cover sm:size-56"
         />
 
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-start justify-between gap-4">
             <div className="min-w-0">
-              <h1 id="profile-name" className="text-title-l font-bold text-base-title">
+              <h1
+                id="profile-name"
+                className="text-[24px] font-bold leading-tight text-base-title sm:text-[32px]"
+              >
                 {displayName}
               </h1>
-              <p className="text-text-m text-base-subtitle">@{profile.login}</p>
+              <p className="mt-1 text-text-m text-base-subtitle">@{profile.login}</p>
             </div>
 
             <a
@@ -41,8 +44,8 @@ export function ProfileCard({ profile }: ProfileCardProps) {
               className="inline-flex shrink-0 items-center gap-2 rounded border border-brand px-4 py-2 text-link font-bold uppercase tracking-widest text-brand transition-colors hover:bg-brand hover:text-base-input focus-visible:ring-2 focus-visible:ring-brand"
             >
               <GitHubIcon className="size-4" />
-              Ver perfil
-              <span className="sr-only"> no GitHub (abre em nova aba)</span>
+              Ver no GitHub
+              <span className="sr-only"> (abre em nova aba)</span>
             </a>
           </div>
 

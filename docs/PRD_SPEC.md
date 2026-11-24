@@ -60,7 +60,7 @@ Entregar um blog funcional, responsivo e acessível, sem backend próprio, no qu
 | RF-05 | Busca textual na Search API | Digitar termo e confirmar dispara `GET /search/issues?q=...`; não é filtro local. |
 | RF-06 | Debounce de 500 ms | Digitar rápido gera uma requisição, não uma por tecla; troca de termo reinicia na página 1. |
 | RF-07 | Paginação real | Com `per_page=6` e ≥ 10 issues existem 2+ páginas; Anterior/Próxima funcionam e desabilitam nas bordas. |
-| RF-08 | Cards de issue | Cada card traz título, data relativa em pt-BR, resumo sem Markdown cru e número de comentários. |
+| RF-08 | Cards de issue | Cada card traz título, data relativa em pt-BR e resumo sem Markdown cru; o número de comentários aparece quando há comentários. |
 | RF-09 | Rota dinâmica `/post/:number` | Clique no card abre a URL correta sem reload completo. |
 | RF-10 | Detalhe via `GET /repos/{owner}/{repo}/issues/{number}` | Requisição individual ocorre também ao colar a URL diretamente. |
 | RF-11 | Markdown no detalhe | Títulos, listas, links e blocos de código do `body` aparecem formatados. |
@@ -80,7 +80,7 @@ Entregar um blog funcional, responsivo e acessível, sem backend próprio, no qu
 | RN-04 | Busca vazia = últimas issues em ordem decrescente; estratégia escolhida: Search API com `repo:... is:issue&sort=created&order=desc`. |
 | RN-05 | Paginação é feita no servidor por `page`/`per_page`; nunca com `slice()` local. Estado desabilitado é exibido nas bordas. |
 | RN-06 | Termo é normalizado (trim/espaços) e passado por `params` do Axios, que codifica a query. |
-| RN-07 | Resumo é texto limpo com `line-clamp-3`; corpo ausente mostra "Sem conteúdo disponível.". Links Markdown usam o `urlTransform` seguro padrão. |
+| RN-07 | Resumo é texto limpo com `line-clamp-4`; corpo ausente mostra "Sem conteúdo disponível.". Links Markdown usam o `urlTransform` seguro padrão. |
 | RN-08 | Diferenciar 404, rate limit, erro de rede e vazio; nenhum estado preso em loading. |
 | RN-09 | Nenhum token GitHub no código, README, `.env`, variáveis `VITE_*` ou histórico. SPA funciona sem autenticação. |
 | RN-10 | `username`, `repo`, `per_page` e `debounceMs` ficam apenas em `src/config/blog.ts`. |
@@ -112,8 +112,9 @@ Backend próprio, banco de dados, login/autenticação, criação/edição de is
 
 - Tema escuro do Figma: fundo `#071422`, cards `#112131`, profile `#0B1B2B`, destaque azul `#3294F8`.
 - Fonte **Nunito** importada no `index.html`; títulos com line-height 130%, textos 160%.
-- Banner decorativo no topo, card de perfil sobreposto ao banner.
-- Busca acima da grade, com contador de publicações ao lado do label.
-- Grid responsivo: 1 coluna no mobile, 2 no tablet, 3 no desktop (aprox.).
-- Detalhe com largura máxima centralizada e Markdown estilizado (block code com fundo `#040F1A`).
+- Banner decorativo no topo com logo **GITHUB BLOG** centralizada; card de perfil sobreposto ao banner.
+- Container centralizado de 1280 px; avatar de 224 px no perfil.
+- Busca em largura total acima da grade, com contador de publicações ao lado do label "Publicações".
+- Grid responsivo: 1 coluna no mobile e 2 colunas a partir de 768 px (conforme capturas do Figma).
+- Detalhe com cabeçalho em card próprio e Markdown direto no fundo (bloco de código com fundo `#112131`).
 - Foco visível com `focus-visible:ring-2 focus-visible:ring-brand` em todos os controles interativos.
