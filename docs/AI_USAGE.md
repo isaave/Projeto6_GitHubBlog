@@ -70,4 +70,14 @@ Registro de como o OpenCode foi usado como apoio (não substituto da compreensã
 
 ---
 
+## Evidência 8 — Home integrada e validação no navegador (TASK-07, 2026-11-24)
+
+- **Contexto/prompt:** implementar a TASK-07: SearchInput, IssueCard, IssueList, Pagination e HomePage conectando os Hooks.
+- **Objetivo:** entregar o fluxo Home → Busca → Paginação com estados claros.
+- **Resultado do OpenCode:** criou os quatro componentes e a HomePage. O campo usa `label`/`htmlFor`, contador `aria-live`, botão de limpar; cards exibem resumo `line-clamp-3`, data relativa e comentários; a paginação desabilita as bordas. `setPage(1)` é chamada a cada alteração do termo; o valor debounced alimenta `useIssues`. Substituiu um `useEffect` que dava aviso de lint por um `displayedPage` derivado no render.
+- **Ajustes feitos pelo aluno:** conferir no DevTools se a busca dispara uma requisição após ~500 ms e se `page=2` é enviada ao clicar em Próxima (depende das issues da TASK-02).
+- **Verificação pelo aluno:** `npm run build` e `npm run lint` sem erros. No navegador, perfil real apareceu com bio e 17 seguidores; contador mostrou 0 publicações e o estado vazio foi exibido corretamente; console sem erros.
+
+---
+
 > As próximas evidências serão adicionadas a cada tarefa implementada, com o prompt usado, o resultado, os ajustes manuais e a forma de verificação.

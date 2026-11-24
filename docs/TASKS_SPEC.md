@@ -61,7 +61,7 @@
 - **RF/RN:** RF-04, RF-05, RF-06, RF-07, RF-08, RF-09, RF-15, RF-16, RN-03, RN-05, RN-06, RN-07.
 - **Arquivos:** `src/components/SearchInput.tsx`, `IssueCard.tsx`, `IssueList.tsx`, `Pagination.tsx`, `src/pages/HomePage.tsx`.
 - **Critério de pronto:** grid responsivo; contador; cards clicáveis; paginação real; vazio tratado.
-- **Status:** [ ]
+- **Status:** [x] (2026-11-24) — build/lint OK; Home validada no navegador com perfil real e estado vazio (repo ainda sem issues). Cards/paginação serão exercitados após a TASK-02.
 
 ## TASK-08 — Detalhe do post e 404
 - **Descrição:** rota `/post/:number`, PostHeader, MarkdownView e NotFoundPage.
@@ -99,3 +99,4 @@
 | TASK-04 | `feat: add typed GitHub API service and error mapping` | 2026-11-24 |
 | TASK-05 | `feat: add async hooks and formatting utilities` | 2026-11-24 |
 | TASK-06 | `feat: add header, profile card and async state views` | 2026-11-24 |
+| TASK-07 | `feat: build home feed with search and pagination` | 2026-11-24 |
