@@ -22,7 +22,18 @@ function createError(
  * Converte qualquer falha do Axios em um erro de domínio previsível (RN-08/RF-14).
  * Requisições canceladas pelo cleanup dos Hooks não devem virar erro visível.
  */
+function isBlogApiError(value: unknown): value is BlogApiError {
+  if (typeof value !== 'object' || value === null) return false
+  const candidate = value as Partial<BlogApiError>
+  return typeof candidate.kind === 'string' && typeof candidate.message === 'string'
+}
+
 export function toBlogApiError(error: unknown): BlogApiError {
+  // Os serviços já convertem falhas do Axios; evita perder a mensagem original.
+  if (isBlogApiError(error)) {
+    return error
+  }
+
   if (!axios.isAxiosError(error)) {
     return createError('unknown')
   }

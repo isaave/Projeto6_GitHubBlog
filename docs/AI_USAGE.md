@@ -50,4 +50,14 @@ Registro de como o OpenCode foi usado como apoio (não substituto da compreensã
 
 ---
 
+## Evidência 6 — Hooks e utils (TASK-05, 2026-11-24)
+
+- **Contexto/prompt:** implementar a TASK-05 com `useDebouncedValue`, `useProfile`, `useIssues`, `useIssue`, datas relativas e resumo de Markdown.
+- **Objetivo:** isolar estados assíncronos e cancelamento fora dos componentes de interface.
+- **Resultado do OpenCode:** criou `useAsyncData.ts` (genérico, com `requestId`, `AbortController` e `reload`), wrappers `useProfile`/`useIssues`/`useIssue`, `useDebouncedValue` (500 ms da config) e `utils/format.ts`. Adicionou em `apiError.ts` um type guard para não perder erros já convertidos pelo serviço.
+- **Ajustes feitos pelo aluno:** o lint apontou aviso de `setState` síncrono no efeito; o estado de carregamento passou a ser derivado no render pela comparação de `requestId`. Confirmou com Node que `formatDistanceToNow(..., ptBR, addSuffix)` gera "há 2 dias".
+- **Verificação pelo aluno:** `npm run build` e `npm run lint` sem erros nem avisos; conferir no navegador que digitar no campo não dispara requisição antes de 500 ms (TASK-07).
+
+---
+
 > As próximas evidências serão adicionadas a cada tarefa implementada, com o prompt usado, o resultado, os ajustes manuais e a forma de verificação.

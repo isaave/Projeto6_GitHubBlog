@@ -45,7 +45,7 @@
 - **RF/RN:** RF-06, RF-07, RF-08, RF-13, RF-14, RN-05, RN-07, RN-08.
 - **Arquivos:** `src/hooks/*.ts`, `src/utils/format.ts`.
 - **Critério de pronto:** debounce de 500 ms; página reseta na busca; cleanup aborta requisição; estados `idle|loading|success|error`.
-- **Status:** [ ]
+- **Status:** [x] (2026-11-24) — hooks criados; data relativa validada como "há 2 dias"; build e lint sem erros. Reset da página será ligado ao input na TASK-07.
 
 ## TASK-06 — Layout: Header, ProfileCard e estados
 - **Descrição:** banner decorativo, card de perfil sobreposto e componentes LoadingState/ErrorState/EmptyState.
@@ -97,3 +97,4 @@
 | TASK-02 | pendente | — |
 | TASK-03 | `feat: scaffold Vite React TS with Tailwind v4 tokens` | 2026-11-24 |
 | TASK-04 | `feat: add typed GitHub API service and error mapping` | 2026-11-24 |
+| TASK-05 | `feat: add async hooks and formatting utilities` | 2026-11-24 |
