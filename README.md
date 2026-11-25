@@ -4,7 +4,7 @@ Blog pessoal construído como projeto de **recuperação da disciplina Single Pa
 
 - **Repositório:** https://github.com/isaave/Projeto6_GitHubBlog
 - **Referência visual (Figma):** https://www.figma.com/design/UklolDw90CmcDAj9piQVUJ/GitHub-Blog--Community---Copy-?node-id=2-1297
-- **Deploy:** _a publicar (Vercel/Netlify)_
+- **Deploy (GitHub Pages):** https://isaave.github.io/Projeto6_GitHubBlog/
 
 ## Proposta
 
@@ -103,7 +103,7 @@ docs/                       # PRD_SPEC, TECH_SPEC, TASKS_SPEC e AI_USAGE
 - [x] Responsividade 375/768/1280 px e acessibilidade
 - [x] Testes automatizados (4 cenários)
 - [x] Publicação das 10 issues no repositório (#1–#10, via API autenticada)
-- [ ] Aplicação publicada
+- [x] Aplicação publicada no GitHub Pages
 
 ## Decisões técnicas
 

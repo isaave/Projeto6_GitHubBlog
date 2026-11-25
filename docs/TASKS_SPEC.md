@@ -85,7 +85,7 @@
 - **RF/RN:** RF-15, RF-16; seção 11 da spec de entrega.
 - **Arquivos:** `README.md`, `docs/AI_USAGE.md`, `docs/PRD_SPEC.md`, `docs/TASKS_SPEC.md`, `docs/screenshots/*`.
 - **Critério de pronto:** checklist da seção 10 integralmente marcado; links de repo e deploy no README.
-- **Status:** [~] (2026-11-24) — README escrito, issues publicadas e capturas reais geradas em `docs/screenshots/`; falta publicar a aplicação e adicionar o link no README.
+- **Status:** [x] (2026-11-24) — README com link do deploy, issues publicadas e capturas reais em `docs/screenshots/`. Aplicação publicada em https://isaave.github.io/Projeto6_GitHubBlog/.
 
 ## TASK-11 — Fidelidade visual às capturas do Figma
 - **Descrição:** alinhar Home e detalhe às capturas fornecidas: logo centralizada, container 1280, perfil maior, busca em largura total, grid de 2 colunas e cabeçalho do post em card próprio.
@@ -109,7 +109,7 @@
 - **RF/RN:** RF-09, RF-10, RF-15, RN-10.
 - **Arquivos:** `vite.config.ts`, `src/App.tsx`, `src/main.tsx`, `public/404.html`, `public/.nojekyll`, `README.md`.
 - **Critério de pronto:** build/lint/test OK; URL publicada abre Home e `/post/:number` por acesso direto; link no README.
-- **Status:** [~] (2026-11-24) — ajustes aplicados, em validação.
+- **Status:** [x] (2026-11-24) — `dist/` publicado na branch `gh-pages`, Pages habilitado; Home, busca e `/post/1` validados no domínio público. Link no README.
 
 ## TASK-13 — Ícone `vector.png` acima da escrita
 - **Descrição:** posicionar o asset `vector.png` (45×35 px) centralizado acima do texto “GITHUB BLOG” no banner.
@@ -138,3 +138,4 @@
 | TASK-11 | `refactor: match Figma layout from reference screenshots` | 2026-11-24 |
 | TASK-12 | `fix: match logo typography from reference screenshot` | 2026-11-24 |
 | TASK-13 | `fix: place vector icon above github blog wordmark` | 2026-11-24 |
+| TASK-14 | `feat: prepare SPA routing for GitHub Pages` + `fix: use Vite base URL for header assets on Pages` | 2026-11-24 |

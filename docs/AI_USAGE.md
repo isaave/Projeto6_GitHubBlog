@@ -150,4 +150,14 @@ Registro de como o OpenCode foi usado como apoio (não substituto da compreensã
 
 ---
 
+## Evidência 16 — Deploy no GitHub Pages (TASK-14, 2026-11-24)
+
+- **Contexto/prompt:** o aluno escolheu GitHub Pages como host da aplicação publicada.
+- **Objetivo:** publicar a SPA com rotas funcionando em um site de projeto (`/Projeto6_GitHubBlog/`).
+- **Resultado do OpenCode:** configurei `base` no Vite e `basename` no `BrowserRouter` a partir de `import.meta.env.BASE_URL`, criei `public/404.html` com redirect da rota perdida e restauração em `main.tsx`. Publiquei `dist/` em `gh-pages` e habilitei Pages via API autenticada (usando a credencial do Git, sem gravar token no repo). Ajustei `vector.png` e `cover.svg` para usarem o `BASE_URL`, pois caminhos absolutos quebravam no subdiretório.
+- **Ajustes feitos pelo aluno:** confirmar a publicação e testar Home, busca e link direto no domínio final.
+- **Verificação pelo aluno:** site responde 200; no navegador, Home com 6 cards e “10 publicações”, busca por “Markdown” retornou 2 resultados, `/post/1` abriu direto com título e Markdown, e o ícone 45×35 carregou sem erros no console.
+
+---
+
 > As próximas evidências serão adicionadas a cada tarefa implementada, com o prompt usado, o resultado, os ajustes manuais e a forma de verificação.
