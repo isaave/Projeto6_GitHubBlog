@@ -140,4 +140,14 @@ Registro de como o OpenCode foi usado como apoio (não substituto da compreensã
 
 ---
 
+## Evidência 15 — Capturas com dados reais e responsividade (TASK-10, 2026-11-24)
+
+- **Contexto/prompt:** verificação final da spec: capturas da Home, da busca, do detalhe e de uma visualização mobile.
+- **Objetivo:** produzir evidências visuais com as 10 issues reais já publicadas.
+- **Resultado do OpenCode:** gerei capturas com Chrome headless via Playwright em 1440×900 (Home, busca por “Markdown” e `/post/1`) e 375×812 (Home), salvando em `docs/screenshots/`.
+- **Ajustes feitos pelo aluno:** conferir se as capturas mostram dados reais e se o layout mobile não tem rolagem horizontal.
+- **Verificação pelo aluno:** `scrollWidth === clientWidth === 375` no mobile; contador “10 publicações”, 6 cards na Home e Markdown renderizado no detalhe.
+
+---
+
 > As próximas evidências serão adicionadas a cada tarefa implementada, com o prompt usado, o resultado, os ajustes manuais e a forma de verificação.

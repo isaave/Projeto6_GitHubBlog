@@ -85,7 +85,7 @@
 - **RF/RN:** RF-15, RF-16; seção 11 da spec de entrega.
 - **Arquivos:** `README.md`, `docs/AI_USAGE.md`, `docs/PRD_SPEC.md`, `docs/TASKS_SPEC.md`, `docs/screenshots/*`.
 - **Critério de pronto:** checklist da seção 10 integralmente marcado; links de repo e deploy no README.
-- **Status:** [~] (2026-11-24) — README escrito e issues publicadas; faltam capturar screenshots com dados reais e publicar a aplicação.
+- **Status:** [~] (2026-11-24) — README escrito, issues publicadas e capturas reais geradas em `docs/screenshots/`; falta publicar a aplicação e adicionar o link no README.
 
 ## TASK-11 — Fidelidade visual às capturas do Figma
 - **Descrição:** alinhar Home e detalhe às capturas fornecidas: logo centralizada, container 1280, perfil maior, busca em largura total, grid de 2 colunas e cabeçalho do post em card próprio.

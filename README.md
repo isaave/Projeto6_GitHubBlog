@@ -132,4 +132,9 @@ Cenários cobertos: perfil/feed; debounce e paginação; detalhe com Markdown; r
 
 ## Evidências
 
-Capturas de tela serão adicionadas em `docs/screenshots/` após a validação final do layout.
+Capturas com dados reais da API em `docs/screenshots/`:
+
+- `home-desktop.png` — Home com perfil, 10 publicações e grade de cards (1440 px).
+- `search-desktop.png` — resultados da busca por “Markdown” (1440 px).
+- `post-detail-desktop.png` — detalhe da issue #1 com Markdown (1440 px).
+- `home-mobile.png` — Home em 375 px, sem rolagem horizontal.
