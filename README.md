@@ -102,7 +102,7 @@ docs/                       # PRD_SPEC, TECH_SPEC, TASKS_SPEC e AI_USAGE
 - [x] Cancelamento de requisições obsoletas
 - [x] Responsividade 375/768/1280 px e acessibilidade
 - [x] Testes automatizados (4 cenários)
-- [ ] Publicação das 10 issues no repositório (conteúdo pronto em `content/issues/`)
+- [x] Publicação das 10 issues no repositório (#1–#10, via API autenticada)
 - [ ] Aplicação publicada
 
 ## Decisões técnicas
@@ -132,4 +132,4 @@ Cenários cobertos: perfil/feed; debounce e paginação; detalhe com Markdown; r
 
 ## Evidências
 
-Capturas de tela serão adicionadas em `docs/screenshots/` após a publicação das issues.
+Capturas de tela serão adicionadas em `docs/screenshots/` após a validação final do layout.

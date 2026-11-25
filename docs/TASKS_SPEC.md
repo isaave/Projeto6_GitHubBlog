@@ -21,7 +21,7 @@
 - **RF/RN:** RF-03, RN-02, RN-07.
 - **Arquivos:** `content/issues/issue-01.md` … `issue-10.md`.
 - **Critério de pronto:** `GET /repos/isaave/Projeto6_GitHubBlog/issues?state=all` retorna ≥ 10 issues sem PRs.
-- **Status:** [~] (2026-11-24) — 10 corpos Markdown prontos em `content/issues/` com índice de títulos. **Bloqueio restante:** publicar as issues no GitHub (sem `gh` nem token no ambiente); aluno publica via UI ou autoriza publicação autenticada.
+- **Status:** [x] (2026-11-24) — 10 issues publicadas (#1–#10) via API autenticada usando a credencial do Git; `GET /issues?state=all` retorna 10 sem PRs e a Search API retorna `total_count: 10`.
 
 ## TASK-03 — Scaffold Vite + React + TypeScript + Tailwind v4
 - **Descrição:** criar projeto na raiz, instalar dependências, configurar Tailwind, tokens do Figma, fonte Nunito e scripts.
@@ -61,7 +61,7 @@
 - **RF/RN:** RF-04, RF-05, RF-06, RF-07, RF-08, RF-09, RF-15, RF-16, RN-03, RN-05, RN-06, RN-07.
 - **Arquivos:** `src/components/SearchInput.tsx`, `IssueCard.tsx`, `IssueList.tsx`, `Pagination.tsx`, `src/pages/HomePage.tsx`.
 - **Critério de pronto:** grid responsivo; contador; cards clicáveis; paginação real; vazio tratado.
-- **Status:** [x] (2026-11-24) — build/lint OK; Home validada no navegador com perfil real e estado vazio (repo ainda sem issues). Cards/paginação serão exercitados após a TASK-02.
+- **Status:** [x] (2026-11-24) — build/lint OK; Home validada no navegador com perfil real. Após a TASK-02: 6 cards reais, contador “10 publicações” e paginação ativa.
 
 ## TASK-08 — Detalhe do post e 404
 - **Descrição:** rota `/post/:number`, PostHeader, MarkdownView e NotFoundPage.
@@ -69,7 +69,7 @@
 - **RF/RN:** RF-09..RF-12, RF-16, RN-07, RN-08.
 - **Arquivos:** `src/pages/PostPage.tsx`, `src/pages/NotFoundPage.tsx`, `src/components/MarkdownView.tsx`, `src/App.tsx`.
 - **Critério de pronto:** URL direta funciona; Markdown formatado; Voltar e Ver no GitHub funcionam; rota inválida mostra 404.
-- **Status:** [x] (2026-11-24) — build/lint OK; rotas validadas no navegador (`/post/abc` → 404, `/post/1` → erro 404 com retry). Markdown ainda será exercitado com as issues da TASK-02.
+- **Status:** [x] (2026-11-24) — build/lint OK; rotas validadas no navegador (`/post/abc` → 404; `/post/1` → erro 404 com retry antes da publicação). Após a TASK-02, `/post/1` exibe título, metadados e Markdown reais.
 
 ## TASK-09 — Testes automatizados
 - **Descrição:** configurar Vitest + Testing Library + MSW e cobrir 3 cenários da TECH_SPEC.
@@ -85,7 +85,7 @@
 - **RF/RN:** RF-15, RF-16; seção 11 da spec de entrega.
 - **Arquivos:** `README.md`, `docs/AI_USAGE.md`, `docs/PRD_SPEC.md`, `docs/TASKS_SPEC.md`, `docs/screenshots/*`.
 - **Critério de pronto:** checklist da seção 10 integralmente marcado; links de repo e deploy no README.
-- **Status:** [~] (2026-11-24) — README escrito; faltam publicar as issues, capturar screenshots com dados reais e publicar a aplicação.
+- **Status:** [~] (2026-11-24) — README escrito e issues publicadas; faltam capturar screenshots com dados reais e publicar a aplicação.
 
 ## TASK-11 — Fidelidade visual às capturas do Figma
 - **Descrição:** alinhar Home e detalhe às capturas fornecidas: logo centralizada, container 1280, perfil maior, busca em largura total, grid de 2 colunas e cabeçalho do post em card próprio.
@@ -118,7 +118,7 @@
 | Tarefa | Commit | Data |
 | --- | --- | --- |
 | TASK-01 | `docs: add PRD, TECH, TASKS, AGENTS and AI usage specs` | 2026-11-24 |
-| TASK-02 | pendente | — |
+| TASK-02 | — (10 issues publicadas via API em 2026-11-24) | — |
 | TASK-03 | `feat: scaffold Vite React TS with Tailwind v4 tokens` | 2026-11-24 |
 | TASK-04 | `feat: add typed GitHub API service and error mapping` | 2026-11-24 |
 | TASK-05 | `feat: add async hooks and formatting utilities` | 2026-11-24 |

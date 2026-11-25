@@ -1,7 +1,7 @@
 # Issues do blog — conteúdo autoral
 
-Cada arquivo abaixo é o **corpo Markdown** de uma issue. Publique as 10 no repositório
-`isaave/Projeto6_GitHubBlog` (uma issue por arquivo) usando o título da tabela.
+Cada arquivo abaixo é o **corpo Markdown** de uma issue. As 10 já estão publicadas no repositório
+`isaave/Projeto6_GitHubBlog` (uma issue por arquivo) com os títulos da tabela.
 
 | # | Título da issue | Arquivo |
 | --- | --- | --- |

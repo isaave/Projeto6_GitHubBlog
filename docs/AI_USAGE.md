@@ -130,4 +130,14 @@ Registro de como o OpenCode foi usado como apoio (não substituto da compreensã
 
 ---
 
+## Evidência 14 — Publicação das 10 issues (TASK-02, 2026-11-24)
+
+- **Contexto/prompt:** o aluno pediu “publique ele no meu repositório”, autorizando a publicação do conteúdo.
+- **Objetivo:** transformar os 10 rascunhos de `content/issues/` em issues reais do `isaave/Projeto6_GitHubBlog` para alimentar o feed.
+- **Resultado do OpenCode:** não havia `gh` CLI, mas a credencial do Git continha um token válido para `isaave` com permissão de push. Criei as issues #1–#10 via `POST /repos/{owner}/{repo}/issues`, lendo títulos de `index.md` e corpos dos arquivos; a rotina verifica títulos existentes para não duplicar. Nenhum token foi gravado no repositório.
+- **Ajustes feitos pelo aluno:** autorizar o uso da credencial já presente no ambiente e conferir o feed depois da publicação.
+- **Verificação pelo aluno:** `GET /issues?state=all` → 10 issues e 0 PRs; Search API → `total_count: 10`; no navegador o contador mostrou “10 publicações”, 6 cards na página 1, paginação ativa e `/post/1` com título, metadados e Markdown reais.
+
+---
+
 > As próximas evidências serão adicionadas a cada tarefa implementada, com o prompt usado, o resultado, os ajustes manuais e a forma de verificação.
