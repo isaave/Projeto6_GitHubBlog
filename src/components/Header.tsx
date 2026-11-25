@@ -12,7 +12,15 @@ export function Header() {
         aria-hidden="true"
       />
 
-      <div className="container-blog flex min-h-[360px] items-center justify-center py-16 sm:min-h-[516px]">
+      <div className="container-blog flex min-h-[360px] flex-col items-center justify-center gap-4 py-16 sm:min-h-[516px] sm:gap-6">
+        <img
+          src="/vector.png"
+          alt=""
+          aria-hidden="true"
+          width={45}
+          height={35}
+          className="h-[35px] w-[45px] object-contain"
+        />
         <span className="text-center text-[24px] font-bold uppercase leading-none tracking-[-0.02em] text-brand sm:text-[33px]">
           Github Blog
         </span>

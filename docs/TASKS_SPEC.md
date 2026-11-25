@@ -103,6 +103,14 @@
 - **Critério de pronto:** caixa da logo próxima de 215×26 px; build/lint/test OK; captura conferida no navegador.
 - **Status:** [x] (2026-11-24) — logo em Nunito Bold 33 px, `tracking-[-0.02em]` e `#3294F8`, caixa de 218×33 px no navegador (ink ~215×24 px), equivalente à referência descontado o zoom; build/lint/test OK. Não há arquivo de logo no repo (apenas `cover.svg`, `icons.svg` e `favicon.svg`), então a logo é tipográfica.
 
+## TASK-13 — Ícone `vector.png` acima da escrita
+- **Descrição:** posicionar o asset `vector.png` (45×35 px) centralizado acima do texto “GITHUB BLOG” no banner.
+- **Pré-requisitos:** TASK-12.
+- **RF/RN:** RF-15, RN-10.
+- **Arquivos:** `public/vector.png`, `src/components/Header.tsx`.
+- **Critério de pronto:** ícone visível e centralizado acima do texto em 375/768/1280 px; asset versionado fora de `dist/`; build/lint/test OK.
+- **Status:** [x] (2026-11-24) — ícone 45×35 px carregado de `/vector.png`, centralizado acima do texto no navegador; build/lint/test OK.
+
 ---
 
 ## Registro de commits
@@ -121,3 +129,4 @@
 | TASK-10 | `docs: add project README and update task status` | 2026-11-24 |
 | TASK-11 | `refactor: match Figma layout from reference screenshots` | 2026-11-24 |
 | TASK-12 | `fix: match logo typography from reference screenshot` | 2026-11-24 |
+| TASK-13 | `fix: place vector icon above github blog wordmark` | 2026-11-24 |

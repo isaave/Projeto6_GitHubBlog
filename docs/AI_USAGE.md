@@ -120,4 +120,14 @@ Registro de como o OpenCode foi usado como apoio (não substituto da compreensã
 
 ---
 
+## Evidência 13 — Asset `vector.png` acima da logo (TASK-13, 2026-11-24)
+
+- **Contexto/prompt:** o aluno pediu “coloque a logo com nome vector.png em cima da escrita github blog”.
+- **Objetivo:** exibir o ícone fornecido acima do wordmark sem perder o arquivo a cada build.
+- **Resultado do OpenCode:** localizei `dist/assets/Vector.png` (45×35 px, ícone azul), que estava em pasta ignorada pelo Git. Copiei para `public/vector.png` e adicionei um `<img>` centralizado acima do texto no `Header.tsx`, com `alt=""` e `aria-hidden` por ser decorativo (o texto já nomeia a marca).
+- **Ajustes feitos pelo aluno:** conferir no navegador o espaço entre ícone e texto e a centralização em telas pequenas.
+- **Verificação pelo aluno:** `npm run build`, `npm run lint` e `npm run test` OK (4/4). No navegador, `/vector.png` carregou em 45×35 px, centralizado acima do texto (24 px de gap), sem erros no console.
+
+---
+
 > As próximas evidências serão adicionadas a cada tarefa implementada, com o prompt usado, o resultado, os ajustes manuais e a forma de verificação.

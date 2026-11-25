@@ -112,7 +112,7 @@ Backend próprio, banco de dados, login/autenticação, criação/edição de is
 
 - Tema escuro do Figma: fundo `#071422`, cards `#112131`, profile `#0B1B2B`, destaque azul `#3294F8`.
 - Fonte **Nunito** importada no `index.html`; títulos com line-height 130%, textos 160%.
-- Banner decorativo no topo com logo **GITHUB BLOG** centralizada (tipografia Nunito Bold 33 px, azul `#3294F8`); card de perfil sobreposto ao banner.
+- Banner decorativo no topo com ícone `vector.png` centralizado acima da logo **GITHUB BLOG** (tipografia Nunito Bold 33 px, azul `#3294F8`); card de perfil sobreposto ao banner.
 - Container centralizado de 1280 px; avatar de 224 px no perfil.
 - Busca em largura total acima da grade, com contador de publicações ao lado do label "Publicações".
 - Grid responsivo: 1 coluna no mobile e 2 colunas a partir de 768 px (conforme capturas do Figma).
