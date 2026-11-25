@@ -1,10 +1,12 @@
 /** Banner decorativo com a identidade visual do blog (RF-15). */
 export function Header() {
+  const asset = (name: string) => `${import.meta.env.BASE_URL}${name}`
+
   return (
     <header className="relative isolate overflow-hidden bg-base-profile">
       <div
         className="absolute inset-0 -z-10 bg-cover bg-center opacity-80"
-        style={{ backgroundImage: 'url(/cover.svg)' }}
+        style={{ backgroundImage: `url(${asset('cover.svg')})` }}
         aria-hidden="true"
       />
       <div
@@ -14,7 +16,7 @@ export function Header() {
 
       <div className="container-blog flex min-h-[360px] flex-col items-center justify-center gap-4 py-16 sm:min-h-[516px] sm:gap-6">
         <img
-          src="/vector.png"
+          src={asset('vector.png')}
           alt=""
           aria-hidden="true"
           width={45}
