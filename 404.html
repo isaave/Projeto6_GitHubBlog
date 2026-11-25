@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub Blog — redirecionando…</title>
+  </head>
+  <body>
+    <script>
+      // GitHub Pages não tem rewrite de SPA: devolve a rota ao index.html pela query.
+      var base = '/Projeto6_GitHubBlog'
+      var path = location.pathname.replace(/^\/Projeto6_GitHubBlog/, '') || '/'
+      location.replace(base + '/?/' + encodeURIComponent(path))
+    </script>
+  </body>
+</html>
