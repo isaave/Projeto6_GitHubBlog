@@ -103,6 +103,14 @@
 - **Critério de pronto:** caixa da logo próxima de 215×26 px; build/lint/test OK; captura conferida no navegador.
 - **Status:** [x] (2026-11-24) — logo em Nunito Bold 33 px, `tracking-[-0.02em]` e `#3294F8`, caixa de 218×33 px no navegador (ink ~215×24 px), equivalente à referência descontado o zoom; build/lint/test OK. Não há arquivo de logo no repo (apenas `cover.svg`, `icons.svg` e `favicon.svg`), então a logo é tipográfica.
 
+## TASK-14 — Publicação no GitHub Pages
+- **Descrição:** ajustar `base` do Vite, `basename` do Router e fallback 404 para o site de projeto, publicar `dist/` na branch `gh-pages`, habilitar Pages e documentar o link.
+- **Pré-requisitos:** TASK-10 (capturas) e TASK-13.
+- **RF/RN:** RF-09, RF-10, RF-15, RN-10.
+- **Arquivos:** `vite.config.ts`, `src/App.tsx`, `src/main.tsx`, `public/404.html`, `public/.nojekyll`, `README.md`.
+- **Critério de pronto:** build/lint/test OK; URL publicada abre Home e `/post/:number` por acesso direto; link no README.
+- **Status:** [~] (2026-11-24) — ajustes aplicados, em validação.
+
 ## TASK-13 — Ícone `vector.png` acima da escrita
 - **Descrição:** posicionar o asset `vector.png` (45×35 px) centralizado acima do texto “GITHUB BLOG” no banner.
 - **Pré-requisitos:** TASK-12.

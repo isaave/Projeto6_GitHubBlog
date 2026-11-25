@@ -4,6 +4,7 @@ import { defineConfig } from 'vitest/config'
 
 // https://vite.dev/config/ · https://tailwindcss.com/docs/installation/using-vite
 export default defineConfig({
+  base: '/Projeto6_GitHubBlog/',
   plugins: [react(), tailwindcss()],
   test: {
     environment: 'jsdom',
